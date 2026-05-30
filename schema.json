@@ -1,0 +1,71 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "description": "",
+  "type": "object",
+  "properties": {
+    "ssh": {
+      "type": "object",
+      "properties": {
+        "port": {
+          "type": "number"
+        },
+        "user": {
+          "type": "string",
+          "minLength": 1
+        },
+        "server": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "port",
+        "user",
+        "server"
+      ]
+    },
+    "tunnel": {
+      "type": "object",
+      "properties": {
+        "localPort": {
+          "type": "number"
+        },
+        "address": {
+          "type": "string"
+        },
+        "externalPort": {
+          "type": "number"
+        },
+        "sshWaitTime": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "localPort",
+        "address",
+        "externalPort",
+        "sshWaitTime"
+      ]
+    },
+    "app": {
+      "type": "object",
+      "properties": {
+        "path": {
+          "type": "string"
+        },
+        "arguments": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "path",
+        "arguments"
+      ]
+    }
+  },
+  "required": [
+    "ssh",
+    "tunnel",
+    "app"
+  ]
+}
