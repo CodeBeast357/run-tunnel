@@ -1,0 +1,2 @@
+@ECHO OFF
+pwsh %~dp0\run-tunnel-core.ps1 %~dpn0.json

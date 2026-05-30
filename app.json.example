@@ -1,0 +1,17 @@
+{
+  "ssh": {
+    "port": 11111,
+    "user": "user1",
+    "server": "example.com"
+  },
+  "tunnel": {
+    "localPort": 22222,
+    "address": "1.2.3.4",
+    "externalPort": 33333,
+    "sshWaitTime": 10
+  },
+  "app": {
+    "path": "app.exe",
+    "arguments": "arg1 arg2 arg3"
+  }
+}
